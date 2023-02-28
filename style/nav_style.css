@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+#menu {
+    height: 45px;
+    background: #222222;
+    transition: none;
+}
+
+#menu ul,
+#menu li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: none;
+}
+
+#menu ul {
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* #menu ul li a img {
+    padding: 10px 0;
+} */
+
+#menu li {
+    display: inline;
+    position: relative;
+}
+
+#menu a {
+    display: block;
+    line-height: 45px;
+    padding: 0 14px;
+    text-decoration: none;
+    color: #ccc;
+    font-size: 18px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* #menu ul li:hover a:first-child {
+    background: none;
+    color: #333 !important
+} */
+
+#menu ul li:hover a {
+    background: #ccc;
+    color: #333 !important
+}
+
+#menu input {
+    display: none;
+    margin: 0 0;
+    padding: 0 0;
+    width: 100%;
+    height: 45px;
+    opacity: 0;
+    cursor: pointer
+}
+
+#menu label {
+    font: bold 30px Arial;
+    display: none;
+    width: 35px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    color: #fff
+}
+
+#menu label span {
+    font-size: 13px;
+    position: absolute;
+    left: 35px
+}
+
+#menu ul li ul {
+    height: auto;
+    overflow: hidden;
+    position: absolute;
+    z-index: 99;
+    color: #333;
+    display: block;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#menu ul li ul li a {
+    color: #333;
+    width: 180px;
+    height: 35px;
+    line-height: 35px;
+    background: #ccc;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#menu a.prett {
+    padding: 0 27px 0 14px;
+    font-size: 18px;
+}
+
+#menu a.prett::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-width: 6px 5px;
+    border-style: solid;
+    border-color: #ccc transparent transparent transparent;
+    position: absolute;
+    top: 20px;
+    right: 9px
+}
+
+#menu a.prett:hover::after,
+#menu ul li:hover a.prett::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-width: 6px 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+    position: absolute;
+    top: 20px;
+    right: 9px
+}
+
+#menu ul li ul li a:hover {
+    background: #BABABA;
+}
+
+@media screen and (max-width: 768px) {
+    #menu {
+        position: relative
+    }
+
+    #menu ul {
+        background: #838383;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: 3;
+        height: auto;
+        display: none;
+    }
+
+    #menu ul.menus {
+        width: 100%;
+        position: static;
+        border: none
+    }
+
+    #menu li {
+        display: block;
+        float: none;
+        width: auto;
+        text-align: left
+    }
+
+    #menu li a {
+        color: #fff
+    }
+
+    #menu li a:hover {
+        color: #333
+    }
+
+    #menu li:hover {
+        background: #BABABA;
+        color: #333;
+    }
+
+    #menu li:hover>a.prett,
+    #menu a.prett:hover {
+        background: #BABABA;
+        color: #333;
+    }
+
+    #menu ul.menus a {
+        background: #BABABA;
+    }
+
+    #menu ul.menus a:hover {
+        background: #fff;
+    }
+
+    #menu input,
+    #menu label {
+        position: absolute;
+        bottom: 8px;
+        left: 11px;
+        display: block;
+    }
+
+    #menu input {
+        z-index: 4;
+    }
+
+    #menu ul li ul li a {
+        width: 100%;
+    }
+
+    #menu a,
+    #menu a.prett {
+        font-size: 15px;
+        display: flex;
+    }
+
+    #menu a.prett:hover::after,
+    #menu ul li:hover a.prett::after {
+        content: "";
+        width: 0;
+        height: 0px;
+        border-width: 6px 5px;
+        border-style: solid;
+        border-color: #333 transparent transparent transparent;
+        position: absolute;
+        top: 20px;
+        right: 29px;
+    }
+}
